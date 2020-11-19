@@ -4,7 +4,7 @@ import pandas as pd
 import sklearn 
 from sklearn.ensemble import RandomForestClassifier
 import xgboost
-
+from sklearn.metrics import confusion_matrix
 
 def cl2idx(inputarr, dict_label):
 	y_label = np.zeros((inputarr.shape[0] ))
@@ -56,8 +56,21 @@ clf.fit(X_train, Y_trainnum)
 clf.score(X_test, Y_testnum)
 decision_path(X_train)[source]
 
- 
-cb = xgboost.XGBRegressor(objective = 'multi:softmax',booster = 'dart', learning_rate = 0.007, max_depth =6 , n_estimators = 1000,gamma =5, alpha =2, num_class = len(np.unique(Y_train))) 
-cb.fit(X_train, Y_trainnum)
 
+Y = OneHotEncoder(sparse=False).fit_transform(Ymc.reshape(-1, 1))
+
+
+"""xgboost softmax regression"""
+dtrain = xgb.DMatrix(X_train, label=Y_trainnum)
+dtest = xgb.DMatrix(X_test, label=Y_testnum)
+params = {'max_depth': 2, 'eta': 0.1, 'silent': 1,
+          'objective': 'multi:softprob', 'num_class': len(np.unique(Y_train))}
+# Fit
+model = xgb.train(params, dtrain, 100)
+# Evalute
+yhat = model.predict(dtest)
+yhat_labels = np.argmax(yhat, axis=1)
+confusion_matrix(Y_testnum, yhat_labels)
+ 
+ 
  
