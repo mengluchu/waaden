@@ -1,0 +1,49 @@
+FID	
+density_SB	percentage of bright subobjects
+density_SD	percentage of dark subobjects
+Dif_bri_BD	Difference between brightness sub_bright/dark
+EF_SB	Elliptic fit sub_bright
+EF_SD	Elliptic fit sub_dark
+GLCM_Co_gr	Gray Level Cooccurrence Matrix Contrast - Green
+GLCM_Co_ni	Gray Level Cooccurrence Matrix Contrast - Near Infrared
+GLCM_Co_re	Gray Level Cooccurrence Matrix Contrast - Red
+GLCM_Co_br	Gray Level Cooccurrence Matrix Contrast - Brightness
+GLCM_Ho_br	GLCM Homogeneity - Brightness
+GLCM_Ho_gr	GLCM Homogeneity - Green
+GLCM_Ho_ni	GLCM Homogeneity - Near Infrared
+GLCM_Ho_re	GLCM Homogeneity - Red
+LW_SB	Length/Width SubBright
+LW_SD	Length/Width SubDark
+max_SI_SS	Maximum Value Shape Index Sub Super
+max_SI_SSM	Maximum Value Shape Index Sub Super Merge
+max_SI_sub	Maximum Value Shape Index Sub
+mean_abs_d	Mean absolute difference darker neighbours
+mean_brigh	Mean value brightness
+mean_green	Mean value greenness
+mean_ndvi	Mean value NDVI
+mean_nir	Mean value NIT
+mean_red	Mean value Red
+mn_area_SB	Mean area bright subobjects
+mn_area_SD	Mean area dark subobjects
+mn_bri_BmD	mean brightness bright-dark
+mn_bri_DmB	mean brightness dark-bright
+mn_bri_SB	Mean value Brightness bright subobjects
+mn_bri_SD	Mean value Brightness dark subobjects
+mn_SI_SB	Mean Shape Index bright subobjects
+mn_SI_SD	Mean Shape Index dark subobjects
+num_sub_ha	number of subobjects per ha
+obj_ha_SS	total objects per ha SS
+obj_ha_SSM	total objects per ha SSM
+SI_SB_SS	shape index sub_bright SS
+SI_SB_SSM	shape index sub_bright SSM
+SI_SD_SS	shape index sub_dark SS
+SI_SD_SSM	shape index sub_dark SSM
+std_brigh	Standard deviation brightness
+std_green	Standard deviation green
+std_ndvi	Standard deviation NDVI
+std_nir	Standard deviation nir
+std_red	Standard deviation red
+tot_BL_SB	Sub bright border length sum (m)
+tot_BL_SD	Sub Dark Border length sum (m)
+Shape_Leng	Length of object
+Shape_Area	Area of object

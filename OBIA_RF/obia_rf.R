@@ -30,11 +30,15 @@ adf = a1 %>% mutate(group_M =
                                startsWith(OMS_GEOCOD,"Hard substraat antropogeen") ~ "H2" ) )
 
 adf = na.omit(adf) 
-st_write(adf, "~/Downloads/Elisabeth/reclassified_ml.shp")
+#st_write(adf, "~/Downloads/Elisabeth/reclassified_ml.shp")
+adf = st_read("/Volumes/Meng_mac/obia/reclasified_ml/reclassified_ml.shp")
+table(adf$group_M) 
+#H1    H2     O (1) P1a1 (4)  P1a2 (6)   P2b   P2c   S1a (0)   S1c    S2    S3 
+#1936  4953  1159   20327     14471      21768 15742 71556   14783  8814  3422 
 
 nrow(adf) #181098 
 unique(adf$group_M)
-
+names(adf)
 nrow(adf)
  
 
